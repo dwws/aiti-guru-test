@@ -1,0 +1,28 @@
+.paginationWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  gap: 16px;
+}
+
+.itemCount {
+  font-weight: 400;
+  font-size: 18px;
+  color: #969b9f;
+
+  span {
+    color: #333;
+  }
+}
+
+@media (max-width: 640px) {
+  .paginationWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 24px;
+  }
+
+  .itemCount {
+    font-size: 16px;
+  }
+}

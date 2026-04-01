@@ -1,0 +1,72 @@
+.addButton {
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  color: #ebf3ea;
+
+  img {
+    height: 22px;
+    width: 22px;
+  }
+}
+
+.addIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.modalTitle {
+  font-weight: 700;
+}
+
+.modalContent {
+  border-radius: 16px;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 300;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: #1f9d55;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 12px 30px rgba(31, 157, 85, 0.25);
+}
+
+@media (max-width: 640px) {
+  .addButton {
+    flex: 1 1 180px;
+  }
+
+  .formActions {
+    flex-direction: column-reverse;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  .toast {
+    top: auto;
+    right: 12px;
+    left: 12px;
+    bottom: 12px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,245 @@
+.name {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  image {
+    border-radius: 8px;
+  }
+
+  .nameWrapper {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    min-width: 0;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+    color: #222;
+    max-width: 210px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .category {
+    font-weight: 400;
+    font-size: 14px;
+    color: #b2b3b9;
+  }
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #000;
+}
+
+.td {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #000;
+}
+
+.badRating {
+  color: red;
+}
+
+.th {
+  font-weight: 700;
+  font-size: 16px;
+  color: #b2b3b9;
+}
+
+.sortButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.sortButtonCenter {
+  justify-content: center;
+  width: 100%;
+}
+
+.sortButtonActive {
+  color: #333;
+}
+
+.sortIcon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.35;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.sortIconActive {
+  opacity: 1;
+}
+
+.sortIconAsc {
+  transform: rotate(180deg);
+}
+
+.thCenter {
+  text-align: center;
+}
+
+.tableScroller {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  table-layout: fixed;
+  min-width: 1010px;
+}
+
+.selectColumn {
+  width: 56px;
+}
+
+.nameColumn {
+  width: 29%;
+}
+
+.brandColumn {
+  width: 18%;
+}
+
+.skuColumn {
+  width: 18%;
+}
+
+.ratingColumn {
+  width: 10%;
+}
+
+.priceColumn {
+  width: 12%;
+}
+
+.actionsColumn {
+  min-width: 148px;
+  width: 148px;
+}
+
+.paginationWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.itemCount {
+  font-weight: 400;
+  font-size: 18px;
+  color: #969b9f;
+
+  span {
+    color: #333;
+  }
+}
+
+.row {
+  position: relative;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 32px;
+}
+
+.selectedRow::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #3c538e;
+}
+
+.moreButton {
+  padding: 0;
+
+  &:hover {
+    background: transparent;
+  }
+}
+
+@media (max-width: 900px) {
+  .table {
+    min-width: 940px;
+  }
+
+  .name {
+    gap: 14px;
+
+    .title {
+      max-width: 180px;
+      font-size: 15px;
+    }
+  }
+
+  .brand,
+  .td,
+  .th {
+    font-size: 15px;
+  }
+
+  .actions {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .table {
+    min-width: 820px;
+  }
+
+  .name {
+    gap: 12px;
+
+    .title {
+      max-width: 150px;
+      font-size: 14px;
+    }
+
+    .category {
+      font-size: 13px;
+    }
+  }
+
+  .brand,
+  .td,
+  .th {
+    font-size: 14px;
+  }
+
+  .sortButton {
+    gap: 6px;
+  }
+
+  .sortIcon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .actions {
+    gap: 14px;
+  }
+
+  .actionsColumn {
+    min-width: 148px;
+    width: 148px;
+  }
+}
